@@ -1,6 +1,8 @@
 # AWS CDK Examples
 
-This repo contains AWS CDK Infrastructure As Code examples written in Typescript. **COMING SOON** Each example is detailed on my blog https://briankelly.co/blog 
+This repo contains AWS CDK examples written in Typescript. 
+
+**COMING SOON** Each example is accompanied by a short blog post with key learning points https://briankelly.co/blog 
 
 
 ## Table of contents
