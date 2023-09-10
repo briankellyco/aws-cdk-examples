@@ -1,6 +1,8 @@
 # scheduled-fargate-task
 
-## Diagram
+![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge)
+
+## Architecture
 
 <img src="./diagram.png" width="550"/>
 
