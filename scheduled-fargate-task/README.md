@@ -2,7 +2,7 @@
 
 ## Diagram
 
-<img src="./diagram.png" width="450"/>
+<img src="./diagram.png" width="550"/>
 
 
 ## Run example #01 - a scheduled Fargate task
