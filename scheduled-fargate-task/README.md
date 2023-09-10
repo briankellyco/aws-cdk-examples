@@ -2,7 +2,7 @@
 
 ## Diagram
 
-TODO...
+<img src="./diagram.png" alt="CDK diagram" width="450"/>
 
 ## Learning Points
 * Tasks in ECS are one off containers. They are automatically terminated once the code in the docker container runs or the command sent to the docker container completes.
