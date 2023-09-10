@@ -4,10 +4,6 @@
 
 <img src="./diagram.png" width="450"/>
 
-## Learning Points
-* Tasks in ECS are one off containers. They are automatically terminated once the code in the docker container runs or the command sent to the docker container completes.
-* Services in ECS on the other hand will maintain a fixed number of Tasks running (to maintain the DesiredCount of tasks).
-
 
 ## Run example #01 - a scheduled Fargate task
 ``` 
@@ -36,6 +32,10 @@
     Each scheduled run launches a new instance of the container which runs, executes the command passed to the container
     and then terminates.
 ```
+
+## Knowledge Takeaways
+* Tasks in ECS are one off containers. They are automatically terminated once the code in the docker container runs or the command sent to the docker container completes.
+* Services in ECS on the other hand will maintain a fixed number of Tasks running (to maintain the DesiredCount of tasks).
 
 
 
