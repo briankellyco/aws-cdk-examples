@@ -1,8 +1,8 @@
 # scheduled-fargate-task
 
-![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge) This should successfully build out of the box.
+![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge)
 
-## Architecture
+## What components are involved? What is the sequence of events?
 
 <img src="./diagram.png" width="550"/>
 
