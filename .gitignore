@@ -1,0 +1,33 @@
+# gitignore rules: https://labs.consol.de/de/development/git/2017/02/22/gitignore.html
+
+### cdk ###
+.cdk.staging
+cdk.out
+
+### DOT files ###
+# ignore all . files and . folders from being checked in e.g don't commit to repo .idea/
+.*
+# allow .gitignore file
+!/.gitignore
+!/.github
+
+
+### IntelliJ ###
+build/
+out/
+*.iml
+*.iws
+*.ipr
+*.rdb
+
+### keys
+.env
+
+### node ####
+node_modules/
+
+### random stuff to exclude
+output.txt
+dist/
+dist-esbuild/
+
