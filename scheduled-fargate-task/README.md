@@ -1,6 +1,6 @@
 # scheduled-fargate-task
 
-![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge)
+![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge) This should successfully build out of the box.
 
 ## Architecture
 
