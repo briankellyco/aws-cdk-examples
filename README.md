@@ -4,9 +4,9 @@ This repo contains AWS CDK examples written in Typescript.
 
 ## Table of contents
 
-| AWS CDK Example                                                  | Description                                     | Article                                                                 |
-|------------------------------------------------------------------|-------------------------------------------------|-------------------------------------------------------------------------|
-| [scheduled-fargate-task](./scheduled-fargate-task/README.md)     | Create a Scheduled Fargate Task                 | [Click here](https://briankelly.co/blog/aws-cdk-scheduled-fargate-task) |
+| AWS CDK Example                                                  | Description                                     | Article     |
+|------------------------------------------------------------------|-------------------------------------------------|-------------|
+| [scheduled-fargate-task](./scheduled-fargate-task/README.md)     | Create a Scheduled Fargate Task                 | Coming Soon |
 
 
 ## Run the examples
