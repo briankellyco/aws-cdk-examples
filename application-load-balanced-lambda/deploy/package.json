@@ -1,13 +1,12 @@
 {
-  "name": "scheduled-fargate-task",
+  "name": "application-load-balanced-lambda",
   "version": "1.0.0",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "scheduled-fargate-task-01-app": "cdk -a \"npx ts-node --prefer-ts-exts scheduled-fargate-task-01-stack.ts\"",
-    "scheduled-fargate-task-02-app": "cdk -a \"npx ts-node --prefer-ts-exts scheduled-fargate-task-02-stack.ts\""
+    "application-load-balanced-lambda-app": "cdk -a \"npx ts-node --prefer-ts-exts application-load-balanced-lambda-stack.ts\""
   },
   "author": {
     "name": "Brian Kelly",
@@ -18,14 +17,15 @@
   "devDependencies": {
     "@types/jest": "^29.2.5",
     "@types/node": "18.11.18",
+    "aws-cdk": "2.60.0",
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",
-    "aws-cdk": "2.60.0",
     "ts-node": "^10.9.1",
     "typescript": "~4.9.4"
   },
   "dependencies": {
     "aws-cdk-lib": "2.60.0",
-    "constructs": "^10.0.0"
+    "constructs": "^10.0.0",
+    "esbuild": "^0.19.2"
   }
 }
