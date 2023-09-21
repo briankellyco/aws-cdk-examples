@@ -9,7 +9,7 @@ import * as cdk from "aws-cdk-lib";
 import * as events from 'aws-cdk-lib/aws-events';
 
 
-export class ScheduledFargateTask01Stack extends Stack {
+export class ScheduledFargateTask02Stack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
@@ -69,6 +69,6 @@ export class ScheduledFargateTask01Stack extends Stack {
 
 const scheduledFargateTask = new cdk.App();
 
-new ScheduledFargateTask01Stack(scheduledFargateTask, 'ScheduledFargateTaskStack', {
+new ScheduledFargateTask02Stack(scheduledFargateTask, 'ScheduledFargateTaskStack', {
   stackName: "scheduled-fargate-task-02",
 });

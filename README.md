@@ -4,10 +4,11 @@ This repo contains AWS CDK examples written in Typescript.
 
 ## Table of contents
 
-| AWS CDK Example                                                        | Description                     | Article |
-|------------------------------------------------------------------------|---------------------------------|---------|
-| [scheduled-fargate-task](./scheduled-fargate-task/README.md)           | Create a Scheduled Fargate Task | ------- |
-| [application-load-balanced-lambda](./application-load-balanced-lambda/README.md) | Create a Load Balanced Lambda   | ------- |
+| AWS CDK Example                                                                  | Description                                              | Article |
+|----------------------------------------------------------------------------------|----------------------------------------------------------|---------|
+| [application-load-balanced-lambda](./application-load-balanced-lambda/README.md) | Create a Load Balanced Lambda                            | ------- |
+| [lambda-in-vpc-accessing-api](./lambda-in-vpc-accessing-api/README.md)           | Create a Lambda that can call an external API from a VPC | ------- |
+| [scheduled-fargate-task](./scheduled-fargate-task/README.md)                     | Create a Scheduled Fargate Task                          | ------- |
 
 
 ## Run the examples
