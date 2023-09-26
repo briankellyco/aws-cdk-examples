@@ -1,4 +1,4 @@
-// The handler name in the cloudformation template is composed of "filename.handlerFunctionName" e.g hello.handler
+// The handler name in the cloudformation template is composed of "filename.handlerFunctionName" e.g lambda-function.handler
 import { Context, APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda';
 
 export const handler = async (event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult> => {
