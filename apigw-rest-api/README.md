@@ -6,16 +6,14 @@
 
 Create a REST API Gateway integrated with backend lambda functions.
 
-Synchronous calls are made via a proxy integration. Async calls are made via a non-proxy integration.
-
 ## What components and services are involved?
 
 <img src="./diagram.png" width="550"/>
 
-## Run example #01 - 
+## Run example #01
 ``` 
-1.  Deploy a load balanced Fargate service
-        cd /path/to/aws-cdk-examples/application-load-balanced-lambda/deploy
+1.  Deploy a REST API Gateway:
+        cd /path/to/aws-cdk-examples/apigw-rest-api/deploy
         npm run apigw-rest-api-01-app synth
         npm run apigw-rest-api-01-app list
         npm run apigw-rest-api-01-app deploy
