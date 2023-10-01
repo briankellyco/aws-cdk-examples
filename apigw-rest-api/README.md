@@ -29,7 +29,7 @@ Create a REST API Gateway integrated with backend lambda functions.
 
 
 ## Knowledge & Takeaways
-* RestApis are synchronous by default and integrations use a proxy by default to enable this. 
+* RestApis are synchronous by default and integrations use a proxy to enable this.
 * Async calls can be configured via a non-proxy integration. Applications might require async for batch operations or a long-latency operation.
 * Adding a "resource" to the root api via CDK just means that you are adding a path to the URL e.g /books (technically... its not essential... accessing resources via the root is possible e.g /prod)
 
