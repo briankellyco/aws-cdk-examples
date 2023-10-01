@@ -4,7 +4,7 @@
 ![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge)
 
 
-Create a REST API Gateway integrated with a backend lambda functions.
+Create a REST API Gateway integrated with backend lambda functions.
 
 Synchronous calls are made via a proxy integration. Async calls are made via a non-proxy integration.
 
