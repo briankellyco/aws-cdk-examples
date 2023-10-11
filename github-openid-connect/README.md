@@ -6,7 +6,7 @@ Create an OpenID Connect integration between Github Action workflows and AWS.
 
 ## What is OpenID Connect?
 
-Github Actions now support OpenID Connect (OIDC) which means a short-lived token can be created each time a CI/CD pipeline runs. This enables secure deployment of applications to the cloud.
+Github Actions now support OpenID Connect (OIDC) which provide the ability to get a short-lived token each time a CI/CD pipeline runs. This enables secure deployment of applications to the cloud.
 
 The benefits are:
 
