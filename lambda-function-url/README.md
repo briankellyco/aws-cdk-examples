@@ -31,12 +31,12 @@ Create a HTTPS endpoint that enables a lambda to be invoked by using Lambda Func
 
 
 ## Knowledge & Takeaways
-* Function URLs are best for use cases where you need to implement a single-function microservice with a public endpoint e.g process a form
-* Function URLs support throttling (performed by using the AWS Lambda provisioned concurrency feature) but you are not able to throttle per IP address or API key
-* Function URLs support CORS and IAM authentication (but no Cognito integration) and no WAF protection
-* Function URLs have to use Cloudfront in order to support custom domains
-* Function URLs have a 15 minute timeout
-* API Gateway is a more expensive, more feature rich alternative to Function URLs
+* Function URLs are best for use cases where you need to implement a single-function microservice with a public endpoint e.g process a form.
+* Function URLs support throttling (performed by using the AWS Lambda provisioned concurrency feature) but you are not able to throttle per IP address or API key.
+* Function URLs support CORS and IAM authentication (but no Cognito integration) and no WAF protection.
+* Function URLs have to use Cloudfront in order to support custom domains.
+* Function URLs have a 15 minute timeout.
+* API Gateway is a more expensive, more feature rich alternative to Function URLs.
 
 
 ## References

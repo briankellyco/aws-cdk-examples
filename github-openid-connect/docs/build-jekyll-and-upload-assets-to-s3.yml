@@ -1,0 +1,53 @@
+name: Build jekyll site and upload assets to S3 bucket
+
+on:
+  push:
+    branches:
+    - master # or main after October 2020
+
+jobs:
+  build:
+    name: Build jekyll site and upload assets to S3 bucket
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read    # required to checkout the code from the repo
+      id-token: write   # required to get JWT token from OIDC
+
+    steps:
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::<my-account-number-here>:role/github-role-to-deploy-applications
+        role-session-name: github-session-deploying-<my-repo-name-here>
+        aws-region: eu-west-1
+
+    - name: Check JWT token validation was successful and that role has been assumed
+      run: aws sts get-caller-identity
+
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Ruby, JRuby and TruffleRuby
+      uses: ruby/setup-ruby@v1.126.0
+      with:
+        ruby-version: '3.0' # Not needed with a .ruby-version file
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+    - name: Setup Environment.
+      run: |
+        gem install webrick
+        gem install kramdown-parser-gfm
+        gem install jekyll
+        sudo apt-get update
+        sudo apt-get install -y python3-pip apt-transport-https ca-certificates gnupg2 python3-yaml jq
+
+    - name: Build Site with Jekyll.
+      run: JEKYLL_ENV=production bundle exec jekyll build -d site
+
+    # AWS role needs to be updated to allow list/put/delete on the bucket e.g bucketname needs to be added to policy
+    - name: Copy files to S3 bucket & invalidate cloudfront cache
+      run: |
+        aws s3 sync site/ s3://<name-of-my-s3-bucket>
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths '/*';
