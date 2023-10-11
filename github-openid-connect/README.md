@@ -2,7 +2,7 @@
 
 ![stability-badge](https://img.shields.io/badge/stability-Stable-success.svg?style=for-the-badge)
 
-Create an OpenID Connect integration between Github Actions workflow and AWS.
+Create an OpenID Connect integration between Github Action workflows and AWS.
 
 ## What is OpenID Connect?
 

@@ -8,7 +8,7 @@ This repo contains AWS CDK examples written in Typescript.
 |----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------|
 | [apigw-rest-api](./apigw-rest-api/README.md)                                     | Create a REST API Gateway integrated with backend lambda functions.                        | ------- |
 | [application-load-balanced-lambda](./application-load-balanced-lambda/README.md) | Create a Load Balanced Lambda.                                                             | ------- |
-| [github-openid-connect](./github-openid-connect/README.md)                       | Create an OpenID Connect integration between Github Actions workflow and AWS.              | ------- |
+| [github-openid-connect](./github-openid-connect/README.md)                       | Create an OpenID Connect integration between Github Action workflows and AWS.              | ------- |
 | [lambda-function-url](./lambda-function-url/README.md)                           | Create a HTTPS endpoint that enables a lambda to be invoked by using Lambda Function URLs. | ------- |
 | [lambda-in-vpc-accessing-api](./lambda-in-vpc-accessing-api/README.md)           | Create a Lambda that can call an external API from a VPC.                                  | ------- |
 | [scheduled-fargate-task](./scheduled-fargate-task/README.md)                     | Create a Scheduled Fargate Task.                                                           | ------- |
