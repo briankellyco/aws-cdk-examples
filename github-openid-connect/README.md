@@ -57,3 +57,4 @@ How it works:
 * https://aws.amazon.com/blogs/security/use-iam-roles-to-connect-github-actions-to-actions-in-aws/
 * https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_oidc.html
 * https://awsteele.com/blog/2021/09/15/aws-federation-comes-to-github-actions.html
+* https://towardsthecloud.com/aws-cdk-openid-connect-github
