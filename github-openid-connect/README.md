@@ -28,7 +28,7 @@ How it works:
 <img src="./diagram.png" width="550"/>
 
 
-## Run example #01 - a lambda function URL http endpoint
+## Run example
 ``` 
 1.  Deploy steps:
         cd /path/to/aws-cdk-examples/github-openid-connect
