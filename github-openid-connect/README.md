@@ -15,8 +15,8 @@ The benefits are:
 
 How it works:
 
-1.  Developer registers an OIDC Identity Provider (Github Actions Token Endpoint) in their Cloud account.
-2.  Developer creates a security role in their Cloud account. To the security role a set of "trusts" is registered. Each trust added represents a github repository (with or without branch/tag identifiers).
+1.  A Developer registers an OIDC Identity Provider (Github Actions Token Endpoint) in their Cloud account.
+2.  A Developer creates a security role in their Cloud account. To the security role a set of "trusts" is registered. Each trust added represents a github repository (with or without branch/tag identifiers).
 3.  On running a Github Action workflow pipeline it auto-generates a JWT token which contains a "sub" field. The sub field value identifies a github repository (with or without branch/tag identifiers).
 4.  The Github Action workflow sends the JWT token to the Cloud provider (AWS, Azure, etc) and asks for a Cloud security token.
 5.  The Cloud access token is returned to Github Actions if it passes validation in the Cloud provider. Validation involves checking that the JWT token sub field value is in the list of "trusts" that is attached to the security role that we setup earlier.
@@ -39,17 +39,17 @@ How it works:
         npm run github-openid-connect-app destroy
         
 2.  Example Github action workflow:
-      /docs/build-jekyll-and-upload-assets-to-s3.yml 
+      /docs/checkout-repo-and-upload-to-s3.yml
     
 3.  At a minimum the Github action workflow should be able to reach the "Check JWT token validation was successful" step. Modify the workflow to fit your purposes.
 ```
 
 ## Knowledge & Takeaways
-* organisations may be more interested in a multi-account setup. An approach [detailed here](https://dev.to/aws-builders/deploying-aws-cdk-apps-using-short-lived-credentials-and-github-actions-59g6).
 * authentication in all cases happens by registering an OIDC IdentifyProvider with your cloud provider [OpenIdConnectProvider](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_iam.OpenIdConnectProvider.html)
   and assuming the federated identity (via an IAM role) to access and interact with the cloud provider resources.
 * a federated identity means linking a persons electronic identity and attributes, stored across multiple distinct identity management systems (in this case the actors are Github & AWS).
 * the Github workflow job needs two permissions `id-token: write` (to get JWT token from OIDC) and `contents: read` (to checkout the code from the repo) to successfully run with this OIDC integration. 
+* organisations may be more interested in a multi-account setup. An approach [detailed here](https://dev.to/aws-builders/deploying-aws-cdk-apps-using-short-lived-credentials-and-github-actions-59g6).
 
 
 ## References

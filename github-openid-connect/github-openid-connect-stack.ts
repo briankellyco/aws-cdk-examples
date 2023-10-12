@@ -24,7 +24,7 @@ export class GithubOpenidConnectStack extends cdk.Stack {
             },
         };
 
-        // Attach either an inlinePolicy or a managedPolicy to the role -> https://github.com/sst/sst/blob/master/www/docs/going-to-production.md
+        // Attach either an inlinePolicy or a managedPolicy to the role
         new iam.Role(this, 'GithubRoleToDeployApplications', {
             assumedBy: new iam.WebIdentityPrincipal(githubOidcProvider.openIdConnectProviderArn, conditions),
             managedPolicies: [
